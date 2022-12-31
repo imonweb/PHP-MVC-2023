@@ -89,7 +89,21 @@
     /* ====== UPDATE ====== */
     public function update($id, $data, $id_column = 'id')
     {
-      
+      $data[$id_column] = $id;
+
+      $keys = array_keys($data);
+      $query = "update $this->table set ";
+
+      foreach($keys as $key){
+        $query .= $key . " = :" . $key . ", ";
+      }
+
+      $query = trim($query,", ");
+
+      $query .= " where $id_column = :$id_column ";
+      // echo $query;
+      $this->query($query, $data);
+      return false;
     }
 
     /* ====== DELETE ====== */
