@@ -7,11 +7,12 @@ class Home extends Controller
     $model = new Model;
     // $model->test();
     // $arr['id'] = 1;
-    $arr['name'] = "john";
-    $arr['age'] = 45;
+    // $arr['name'] = "john";
+    // $arr['age'] = 45;
   
     // $result = $model->where($arr);
-    $result = $model->insert($arr);
+    // $result = $model->insert($arr);
+    $result = $model->delete(6);
     // echo "This is the home controller";
     show($result);
     $this->view('home');

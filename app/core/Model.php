@@ -72,6 +72,8 @@
       return false;
     }
 
+     
+    /* ====== INSERT ====== */
     public function insert($data)
     {
       $keys = array_keys($data);
@@ -83,14 +85,23 @@
       
     }
 
+     
+    /* ====== UPDATE ====== */
     public function update($id, $data, $id_column = 'id')
     {
       
     }
 
+    /* ====== DELETE ====== */
     public function delete($id, $id_column = 'id')
     {
-      
+      $data[$id_column] = $id;
+      $query = "delete from $this->table where $id_column = :$id_column ";
+      // echo $query;
+ 
+      $this->query($query, $data);
+
+      return false;
     }
 
  }
