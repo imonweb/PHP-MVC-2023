@@ -1,8 +1,12 @@
 <?php 
-
-class Home extends Controller
+/*  Using use keyword outside class is for namespace */
+// class Home extends Controller
+class Home 
 {
-  public function index($a = '', $b = '', $c = '')
+  /*  use - inside class is for Trait */
+  use Controller;
+  // public function index($a = '', $b = '', $c = '')
+  public function index()
   {
     // $model = new Model;
 
@@ -35,15 +39,32 @@ class Home extends Controller
 
     /*  Show */
     // $result = $user->where(['id'=>2]);
-    $result = $user->findAll();
-    show($result);
+    // $result = $user->findAll();
+    // show($result);
 
- 
+    // show($a);
+    // show($b);
+    // show($c);
+    // show("from the index function");
+   
+    
     $this->view('home');
   }
+/*
+  public function edit($a = '', $b = '', $c = '')
+  {
+    show($a);
+    show($b);
+    show($c);
+    show("from the edit function");
+    $this->view('home');
+  }
+  */
 }
 
 // $home = new Home;
 // $home->index();
 
 // call_user_func_array([$home, 'index'], ['a' => 'something', 'b' => 'b something', 'c' => 'cwomething']);
+
+
