@@ -1,6 +1,11 @@
 <?php 
 /*  Using use keyword outside class is for namespace */
 // class Home extends Controller
+
+/*  prevent access to this file */
+// defined('ROOTPATH') OR exit('Access Denied!');
+
+
 class Home 
 {
   /*  use - inside class is for Trait */

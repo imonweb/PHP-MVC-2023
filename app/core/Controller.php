@@ -1,5 +1,8 @@
 <?php
 
+/*  prevent access to this file */
+// defined('ROOTPATH') OR exit('Access Denied!');
+
 // class Controller 
 Trait Controller 
 {

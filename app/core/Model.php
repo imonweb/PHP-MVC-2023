@@ -1,4 +1,7 @@
 <?php
+/*  prevent access to this file */
+// defined('ROOTPATH') OR exit('Access Denied!');
+
 /**
 *
 *  Main Model trait 

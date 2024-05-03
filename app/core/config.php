@@ -1,5 +1,8 @@
 <?php
 
+/*  prevent access to this file */
+// defined('ROOTPATH') OR exit('Access Denied!');
+
 if($_SERVER['SERVER_NAME'] == 'localhost')
 {
   /*  database config */
